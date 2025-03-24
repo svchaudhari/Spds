@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"spds-frontend"},"name":"spds-frontend","namespace":"smartpds"},"spec":{"internalTrafficPolicy":"Cluster","ipFamilies":["IPv4"],"ipFamilyPolicy":"SingleStack","ports":[{"name":"http","port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"spds-frontend"},"sessionAffinity":"None","type":"ClusterIP"}}
+  creationTimestamp: "2025-03-23T11:30:22Z"
+  labels:
+    app: spds-frontend
+  name: spds-frontend
+  namespace: smartpds
+  resourceVersion: "36304"
+  uid: 55538158-5140-4658-9d55-b73a06b13e4d
+spec:
+  clusterIP: 10.106.29.39
+  clusterIPs:
+  - 10.106.29.39
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: spds-frontend
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
